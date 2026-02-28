@@ -11,6 +11,10 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    allowedHosts: [
+      "p47weapsvj.ap-south-1.awsapprunner.com",
+      ".awsapprunner.com", // Allow all AWS App Runner hosts
+    ],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
